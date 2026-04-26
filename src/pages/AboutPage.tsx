@@ -64,7 +64,7 @@ export default function AboutPage() {
           <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
             <div className="w-48 h-48 md:w-56 md:h-56 rounded-3xl overflow-hidden border-4 border-white shadow-2xl shrink-0 rotate-2 group-hover:rotate-0 transition-transform duration-500">
                <img 
-                 src="/shwetad.jpeg" 
+                 src="shwetad.jpeg" 
                  alt="Shweta Devdas" 
                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" 
                  onError={(e) => {
@@ -96,28 +96,28 @@ export default function AboutPage() {
               prn: "125B1F210", 
               role: "Full Stack Developer", 
               email: "pratik.phapale25@pccoepune.org",
-              img: "/pratik.jpg"
+              img: "pratik.jpg"
             },
             { 
               name: "Swastik Phapale", 
               prn: "125B1F212", 
               role: "Backend Developer", 
               email: "swastik.phapale25@pccoepune.org",
-              img: "/swastik.png"
+              img: "swastik.png"
             },
             { 
               name: "Sarthak Gandhi", 
               prn: "125B1F201", 
               role: "UI/UX Designer", 
               email: "sarthak.gandhi25@pccoepune.org",
-              img: "/sarthak.jpg"
+              img: "sarthak.jpg"
             },
             { 
               name: "Swapnil Jadhav", 
               prn: "125B1F211", 
               role: "Frontend Developer", 
               email: "swapnil.jadhav25@pccoepune.org",
-              img: "/swapnil.png"
+              img: "swapnil.png"
             }
           ].map((member, i) => (
             <motion.div 
