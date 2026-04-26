@@ -1,0 +1,79 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=cabinet-grotesk@400,500,700,800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cabinet Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #f7f9f7;
+  --color-surface: #ffffff;
+  --color-surface-2: #f0f5f1;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-text: #1a2e1a;
+  --color-text-muted: #5a7a5a;
+  --color-text-faint: #9ab09a;
+  --color-primary: #1b7a4a;
+  --color-primary-hover: #155e38;
+  --color-primary-highlight: #d0ead9;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-score-good: #16a34a;
+  --color-score-medium: #d97706;
+  --color-score-bad: #dc2626;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+.dark {
+  --color-bg: #0f1a0f;
+  --color-surface: #1a2a1a;
+  --color-surface-2: #243424;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #f0fdf4;
+  --color-text-muted: #a7c4a7;
+  --color-text-faint: #6b8e6b;
+  --color-primary: #4ade80;
+  --color-primary-hover: #22c55e;
+  --color-primary-highlight: #064e3b;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, 
+    var(--color-surface-2) 25%, 
+    var(--color-surface) 50%, 
+    var(--color-surface-2) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all;
+}
+
+.btn-hover {
+  @apply hover:-translate-y-[1px] hover:shadow-lg transition-all duration-180;
+}
+
+

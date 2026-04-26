@@ -1,0 +1,6 @@
+{
+  "name": "BetterBite",
+  "description": "A smart Indian packaged food health scanner to help consumers make smarter food choices. Scan barcodes or search by name to see health scores and alternatives.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}
